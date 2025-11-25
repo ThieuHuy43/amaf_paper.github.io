@@ -43,6 +43,10 @@ h3 {
   color: #0056d6;
 }
 
+.abstract {
+  text-align: justify;
+}
+
 .figure {
   width: 100%;
   border-radius: 10px;
