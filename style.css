@@ -1,4 +1,4 @@
-body {
+/* /* body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background: #f8f9fa;
@@ -58,4 +58,267 @@ h3 {
   margin: 20px 0;
 }
 
-/* Modern CSS Reset and Base Styles */
+ */
+
+/* Base & layout
+-------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background: radial-gradient(circle at top, #f0f4ff 0, #f8f9fa 40%, #f5f5f5 100%);
+  color: #222;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto 40px auto;
+}
+
+/* Hero / Header
+-------------------------------------------------- */
+
+.hero {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: #fff;
+  padding: 40px 16px 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+}
+
+.hero-content {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.conference-pill {
+  display: inline-block;
+  padding: 6px 16px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  opacity: 0.92;
+  margin-bottom: 14px;
+}
+
+.affiliation {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+/* Buttons & links
+-------------------------------------------------- */
+
+.links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #ffca28;
+  color: #222;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+.btn.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+}
+
+.btn.secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Sections
+-------------------------------------------------- */
+
+.section {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px 22px 20px;
+  margin: 18px auto;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+}
+
+.section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  border-left: 4px solid #1976d2;
+  padding-left: 8px;
+}
+
+/* Lists & typography
+-------------------------------------------------- */
+
+.highlights,
+.key-results {
+  padding-left: 20px;
+}
+
+.highlights li,
+.key-results li {
+  margin-bottom: 6px;
+}
+
+.abstract {
+  text-align: justify;
+  font-size: 0.98rem;
+}
+
+/* Figure
+-------------------------------------------------- */
+
+.figure-wrapper {
+  margin-top: 6px;
+}
+
+.figure {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  margin: 10px 0;
+  box-shadow: 0 3px 14px rgba(15, 23, 42, 0.12);
+}
+
+.caption {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Results table
+-------------------------------------------------- */
+
+.results-table-wrapper {
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+.results-table th,
+.results-table td {
+  border: 1px solid #e0e0e0;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.results-table th {
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
+.highlight-row {
+  background: #fff8e1;
+}
+
+.table-note {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* Code / BibTeX
+-------------------------------------------------- */
+
+.code-block {
+  background: #0f172a;
+  color: #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  overflow-x: auto;
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+}
+
+.bibtex-note {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+/* Footer
+-------------------------------------------------- */
+
+.footer {
+  margin-top: auto;
+  padding: 14px 16px 18px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Responsive
+-------------------------------------------------- */
+
+@media (max-width: 600px) {
+  .section {
+    padding: 18px 16px;
+  }
+
+  .hero {
+    padding: 26px 12px 22px;
+  }
+
+  .affiliation {
+    font-size: 0.9rem;
+  }
+}
+
